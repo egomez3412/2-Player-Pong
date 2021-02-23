@@ -1,6 +1,7 @@
 # 2-Player-Pong :joystick:
 Instructor: Mehdi Peiravi
 CPSC 362 - Foundation of Software Engineering
+
 Team Members:
 - Eduardo Gomez
 - Bryan Mendoza-Trejo
