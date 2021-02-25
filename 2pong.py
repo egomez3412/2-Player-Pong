@@ -56,3 +56,32 @@ wn.onkeypress(paddle_b_down, "Down")
 
 while True:
     wn.update()
+    
+    # Move the ball
+	    ball.setx(ball.xcor() + ball.dx)
+	    ball.sety(ball.ycor() + ball.dy)
+
+	    # Border checking
+	    if ball.ycor() > 290:
+	        ball.sety(290)
+	        ball.dy *= -1
+
+	    if ball.ycor() < -290:
+	        ball.sety(-290)
+	        ball.dy *= -1
+
+	    if ball.xcor() > 390:
+	        ball.goto(0, 0)
+	        ball.dx *= -1
+	        score_a += 1
+	        pen.clear()
+	        pen.write("Player A: {}     Player B: {}".format(score_a, score_b), align="center",
+	                  font=("Courier", 24, "normal"))
+
+	    if ball.xcor() < -390:
+	        ball.goto(0, 0)
+	        ball.dx *= -1
+	        score_b += 1
+	        pen.clear()
+	        pen.write("Player A: {}     Player B: {}".format(score_a, score_b), align="center",
+	                  font=("Courier", 24, "normal"))
