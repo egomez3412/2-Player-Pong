@@ -1,6 +1,3 @@
-# Pong by Mahdi Sabbouri
-# November 7 2019
-
 import turtle
 import time
 import winsound
